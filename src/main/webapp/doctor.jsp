@@ -13,5 +13,9 @@
     </head>
     <body>
         <h1>Hello World! in doctor</h1>
+        <input type="text" name="doctorID" value="" /><br>
+        <input type="text" name="doctorName" value="" /><br>
+        <input type="submit" value="click" name="click" />
+        
     </body>
 </html>
