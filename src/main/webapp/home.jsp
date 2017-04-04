@@ -22,7 +22,8 @@
            <li><a id="doc">Doctor Details</a></li> 
            <li><a id="in">In Patients</a> </li>
            <li><a id="out">Out Patient</a></li>
-           <li><a id="bill">Billing</a></li>
+           <li><a id="bill">InPatient Billing</a></li>
+           <li><a id="bill">OutPatient Billing</a></li>
            <li><a id="room">Room</a></li>
         </ul>
         <aside id="pageloading">
