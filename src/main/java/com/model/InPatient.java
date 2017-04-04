@@ -28,12 +28,10 @@ public class InPatient implements Serializable {
     @JoinColumn(name="patientID")
     @OneToOne
     private Patient patient;
-    private int roomNumber;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date admitDate;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date dischargeDate;
-    private int roomCharges;
     @OneToOne
     @JoinColumn(name = "roomID")
     private Room room;
@@ -55,13 +53,6 @@ public class InPatient implements Serializable {
         this.patient = patient;
     }
     
-    public int getRoomCharges() {
-        return roomCharges;
-    }
-
-    public void setRoomCharges(int roomCharges) {
-        this.roomCharges = roomCharges;
-    }
     
     public Date getAdmitDate() {
         return admitDate;
@@ -77,13 +68,6 @@ public class InPatient implements Serializable {
 
     public void setDischargeDate(Date dischargeDate) {
         this.dischargeDate = dischargeDate;
-    }
-    public int getRoomNumber() {
-        return roomNumber;
-    }
-
-    public void setRoomNumber(int roomNumber) {
-        this.roomNumber = roomNumber;
     }
 
 }
