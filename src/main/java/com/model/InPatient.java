@@ -7,11 +7,13 @@ package com.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 
@@ -33,10 +35,10 @@ public class InPatient implements Serializable {
     private Date admitDate;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date dischargeDate;
-    private int roomCharges;
     @OneToOne
     @JoinColumn(name = "roomID")
     private Room room;
+  
 
     public Room getRoom() {
         return room;
@@ -54,15 +56,7 @@ public class InPatient implements Serializable {
     public void setPatient(Patient patient) {
         this.patient = patient;
     }
-    
-    public int getRoomCharges() {
-        return roomCharges;
-    }
-
-    public void setRoomCharges(int roomCharges) {
-        this.roomCharges = roomCharges;
-    }
-    
+     
     public Date getAdmitDate() {
         return admitDate;
     }
@@ -77,13 +71,6 @@ public class InPatient implements Serializable {
 
     public void setDischargeDate(Date dischargeDate) {
         this.dischargeDate = dischargeDate;
-    }
-    public int getRoomNumber() {
-        return roomNumber;
-    }
-
-    public void setRoomNumber(int roomNumber) {
-        this.roomNumber = roomNumber;
     }
 
 }

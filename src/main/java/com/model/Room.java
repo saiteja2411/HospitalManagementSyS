@@ -21,14 +21,14 @@ public class Room implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long roomID;
+    private int roomID;
     private String roomType;
 
-    public Long getRoomNumber() {
+    public int getRoomNumber() {
         return roomID;
     }
 
-    public void setRoomNumber(Long roomNumber) {
+    public void setRoomNumber(int roomNumber) {
         this.roomID = roomNumber;
     }
 
