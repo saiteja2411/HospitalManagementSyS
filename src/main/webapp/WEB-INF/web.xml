@@ -4,9 +4,17 @@
         <servlet-name>LoginController</servlet-name>
         <servlet-class>com.controller.LoginController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DoctorController</servlet-name>
+        <servlet-class>com.controller.DoctorController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DoctorController</servlet-name>
+        <url-pattern>/DoctorController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

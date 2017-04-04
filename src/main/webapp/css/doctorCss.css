@@ -1,0 +1,34 @@
+nav.doctor{
+    float: top;
+    padding: 10px;
+}
+a.doctor{
+    border: 2px;
+    padding: 10px;
+    background-color: lightsteelblue;
+    list-style: none;
+}
+
+a.doctor:link{
+    text-decoration: none;
+    font-weight: 400;
+    font-family: sans-serif;
+    font-size: medium;
+}
+a.doctor:hover{
+    background-color: lightcyan;
+}
+
+header.doctor{
+    margin: 10px;
+    text-align: left;
+}
+div.doctor{    
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+input:hover{
+    border-color: activeborder;
+    border-radius: 2px;
+}
