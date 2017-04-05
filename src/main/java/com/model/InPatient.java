@@ -7,11 +7,8 @@ package com.model;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Temporal;
@@ -24,16 +21,12 @@ import javax.persistence.Temporal;
 @PrimaryKeyJoinColumn(name = "patientID")
 public class InPatient extends Patient implements Serializable {
 
-
-    private static final long serialVersionUID = 1L;
-
 //    private static final long serialVersionUID = 1L;
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)
 //    @JoinColumn(name="patientID")
 //    @OneToOne
 //    private Patient patient;
-
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date admitDate;
     @Temporal(javax.persistence.TemporalType.DATE)
@@ -42,7 +35,6 @@ public class InPatient extends Patient implements Serializable {
     @JoinColumn(name = "roomID")
     private Room room;
   
-
     public Room getRoom() {
         return room;
     }
@@ -51,6 +43,7 @@ public class InPatient extends Patient implements Serializable {
         this.room = room;
     }
 
+    
     public Date getAdmitDate() {
         return admitDate;
     }
