@@ -30,7 +30,6 @@ public class InPatient implements Serializable {
     @JoinColumn(name="patientID")
     @OneToOne
     private Patient patient;
-    private int roomNumber;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date admitDate;
     @Temporal(javax.persistence.TemporalType.DATE)
