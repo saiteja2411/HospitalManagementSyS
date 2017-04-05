@@ -24,14 +24,15 @@ public class Room implements Serializable {
     private int roomID;
     private String roomType;
 
-    public int getRoomNumber() {
+
+    public int getRoomID() {
         return roomID;
     }
 
-    public void setRoomNumber(int roomNumber) {
-        this.roomID = roomNumber;
+    public void setRoomID(int roomID) {
+        this.roomID = roomID;
     }
-
+    
     public String getRoomType() {
         return roomType;
     }

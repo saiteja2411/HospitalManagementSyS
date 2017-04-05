@@ -33,22 +33,22 @@ public class InpatientDao {
             Patient p1 = new Patient();
             InPatient p2 = new InPatient();
             //Room r1 = new Room();
-            p1.setName(patientName);
-            p1.setAge(pAge);
-            p1.setGender(gender);
-            p1.setPhoneNumber(pPhoneNumber);
-            p1.setAddress(pAddress);
+            p2.setName(patientName);
+            p2.setAge(pAge);
+            p2.setGender(gender);
+            p2.setPhoneNumber(pPhoneNumber);
+            p2.setAddress(pAddress);
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
             p2.setAdmitDate(format.parse(admitDate));
             p2.setDischargeDate(format.parse(dischargeDate));
             //p2.setRoomNumber(roomNum);
             //r1.setRoomType(roomType);
-            p1.setDoctor(d1);
-            p2.setPatient(p1);
+            p2.setDoctor(d1);
+            //p2.setPatient(p1);
             p2.setRoom(r1);
 
             //session.save(r1);
-            session.save(p1);
+            //session.save(p1);
             session.save(p2);
 
             tx.commit();
